@@ -36,3 +36,4 @@ App settings required on the web app: `GEMINI_API_KEY`, `ALLOWED_ORIGINS`
 
 Never commit your API key. Keep it in an IntelliJ environment variable locally
 and an App Service setting on Azure.
+
