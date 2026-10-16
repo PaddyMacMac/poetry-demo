@@ -35,15 +35,11 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}/poetry-api
-          _dockerfilePathKey_: _dockerfilePath_
-          _targetLabelKey_: _targetLabel_
+          dockerfilePath: Dockerfile
+          targetPort: 8080
           registryUrl: poetryacr.azurecr.io
           registryUsername: ${{ secrets.POETRYAPI_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.POETRYAPI_REGISTRY_PASSWORD }}
           containerAppName: poetry-api
           resourceGroup: rg-poetry
           imageToBuild: poetryacr.azurecr.io/poetry-api:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
-
-
